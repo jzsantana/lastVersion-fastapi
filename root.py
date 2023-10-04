@@ -116,11 +116,6 @@ async def del_serie(serie_id: int):
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Essa série não existe.")
 
 
-# instalar o request
-# usar a api do tmdb e assistir o filme do coderscreen
-# 10 minutes imdb
-# python connect with imdb
-
 if __name__ == '__main__':
     import uvicorn
-    uvicorn.run("valueSeries:app", host='127.0.0.1', port=8000, log_level="info", reload=True)
+    uvicorn.run("root:app", host='127.0.0.1', port=8000, log_level="info", reload=True)
